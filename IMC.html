@@ -1,0 +1,50 @@
+<meta charset="UTF-8">  
+
+<script> //Caixa que inclui apenas o JavaScript
+
+    function quebralinha() { //Tem a função de quebrar linhas
+
+        document.write("<br><br>"); //Dentro do bloco da função criada, eu estou pedindo para ele mostrar na tela a quebra de linhas
+
+    }
+
+    function mostra(escrito) { //Tem a função de mostrar na tela o que foi escrito no código, o JavaScript vai analisar cada "mostra();" escrito e vai ler o que está dentro dos ()
+
+        document.write(escrito); //Dentro do bloco da função criada, eu estou pedindo para ele mostrar na tela o que estava escrito dentro de cada mostra
+        quebralinha(); //Aqui, eu estou chamando um função já existente que sabemos para que serve
+
+    }
+
+    function calculaimc(peso, altura) { //Tem a função de calcular o imc a partir de dois ou mais parâmetros dados dentro dos parenteses
+
+        return peso / (altura * altura);//Retorna o valor da conta feita e guarda dentro da variável
+
+    }
+
+    //Cria uma variável para cada parte necessária do IMC e registra as respostas recebidas dos prompts, assim, dando um valor a cada variável
+    var nome = prompt("Qual é o seu nome?");
+    var pesoInformado = prompt(nome + ", Informe seu peso");
+    var alturaInformada = prompt(nome + ", Informe sua altura");
+
+    var imc = calculaimc(pesoInformado, alturaInformada); //Utilizando o valor que está dentro de cada variável, aplica a função do calculaImc
+
+
+        if (imc <= 18.5) { //Se o IMC for menor ou igual a 18.5, mostra a mensagem escrita
+
+            mostra(nome + ", o seu IMC é " + imc + " e está abaixo do recomendado.");
+
+        }
+
+        if(imc > 35) { //Se o IMC for maior que 35, mostra a mensagem escrita
+
+            mostra(nome + ", o seu IMC é " + imc + " e está acima do recomendado.");
+
+        }
+
+        if(imc >= 18.5 && imc <= 35) { //Se o IMC for maior ou igual a 18.5 e(&&) menor ou igual a 35, mostra a mensagem escrita
+
+                mostra(nome + ", o seu IMC é " + imc + " e está excelente.");
+
+        }
+
+</script> 
